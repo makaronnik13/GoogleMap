@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        html, body
+        {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.StreetViewPanorama(
+                mapDiv,
+                {
+                    position: {lat: 55.8029138, lng: 37.4088502},
+                    pov: {heading: 120, pitch: 0},
+                    zoom: 1
+                });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+</body>
+</html>
